@@ -6,6 +6,7 @@ public class Movement : MonoBehaviour
 {
 
     public PlayerController controller;
+    public Animator animator;
 
     public float runSpeed = 40f;
     float horizontalMove = 0f;
@@ -21,11 +22,21 @@ public class Movement : MonoBehaviour
     void Update()
     {
         horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
+        animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
 
         if (Input.GetButtonDown("Jump"))
         {
             jump = true;
+            animator.SetBool("isJumping", true);
         }
+    }
+
+    //Animation jumping needs to be handled by an event handler. 
+    //Brackeys 2D Animation in Unity: https://www.youtube.com/watch?v=hkaysu1Z-N8&list=PLPV2KyIb3jR6TFcFuzI2bB7TMNIIBpKMQ&index=3
+    public void OnLanding()
+    {
+        animator.SetBool("isJumping", false);
+        //Debug.Log("isJumping is false");
     }
 
     private void FixedUpdate()
