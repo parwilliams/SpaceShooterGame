@@ -21,6 +21,7 @@ public class PlayerController : MonoBehaviour
     public GameObject ammoPrefab;
     public GameObject hero;
     public Transform firePoint;
+    public int maxJumps = 2;
 
     public UnityEvent OnLandEvent; //Needed to make the jump animation end
 
@@ -29,8 +30,9 @@ public class PlayerController : MonoBehaviour
     private Vector2 moveVector;
     private bool onGround;
     private bool lookingRight;
-    private bool canJump;
+    //private bool canJump;
     //private bool jumping;
+    [SerializeField] private int jumpsAvailable;
     private float movementSpeed;
     private Vector3 m_Velocity = Vector3.zero;
     [Range(0, .3f)] [SerializeField] private float m_MovementSmoothing = .05f; //variable to create smoother movement than previous
@@ -45,8 +47,9 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         lookingRight = true; //Set as true in begining to avoid null flag
-        canJump = true;
+        //canJump = true;
         //jumping = false;
+        jumpsAvailable = maxJumps;
     }
 
     // Start is called before the first frame update
@@ -108,7 +111,10 @@ public class PlayerController : MonoBehaviour
             {
                 m_Grounded = true;
                 if (!wasGrounded)
+                {
                     OnLandEvent.Invoke();
+                    jumpsAvailable = maxJumps; //reset jumps when on ground
+                }
             }
         }
 
@@ -198,10 +204,11 @@ public class PlayerController : MonoBehaviour
             Flip();
         }
         // If the player should jump...
-        if (jump)
+        if (jump && jumpsAvailable > 0)
         {
             // Add a vertical force to the player.
             rb.AddForce(new Vector2(0f, jumpForce));
+            jumpsAvailable--;
         }
     }
 

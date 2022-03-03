@@ -1998,6 +1998,7 @@ GameObject:
   - component: {fileID: 1316717720}
   - component: {fileID: 1316717719}
   - component: {fileID: 1316717721}
+  - component: {fileID: 1316717722}
   m_Layer: 0
   m_Name: Hero
   m_TagString: Player
@@ -2116,6 +2117,7 @@ MonoBehaviour:
   ammoPrefab: {fileID: 4305648285907526474, guid: da89cd42fd61c634fb77aa250fc462d9, type: 3}
   hero: {fileID: 1316717713}
   firePoint: {fileID: 1544307359}
+  maxJumps: 2
   OnLandEvent:
     m_PersistentCalls:
       m_Calls:
@@ -2131,6 +2133,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  jumpsAvailable: 0
   m_MovementSmoothing: 0.05
   m_GroundCheck: {fileID: 2116628453}
   m_WhatIsGround:
@@ -2212,6 +2215,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1316717722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1316717713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c01c8bf9422fd4745950026808ee57ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DeathParticlesPrefab: {fileID: 0}
+  ShouldDestroyOnDeath: 1
+  _HealthPoints: 100
 --- !u!1 &1544307358
 GameObject:
   m_ObjectHideFlags: 0
