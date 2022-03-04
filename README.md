@@ -1,4 +1,4 @@
-# SpaceShooterGame
+# SpaceShooterGame - Mission to Mars
 Shooter game designed for CSG-3813
 
 Mars Background for UI: Designed by Freepik
