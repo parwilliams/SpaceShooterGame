@@ -8,7 +8,7 @@ public class ProxyDamage : MonoBehaviour
     public float DamageRate = 10f;
     private void OnTriggerStay2D(Collider2D Col){
         Health H = Col.gameObject.GetComponent<Health>();
-        Debug.Log("Triggered");
+        //Debug.Log("Triggered");
         if(H == null){
             return;
         }

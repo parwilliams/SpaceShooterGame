@@ -3,15 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class GameController : MonoBehaviour
 {
     public static GameController ThisInstance = null;
     public static int Score;
+    public static int initScore = 0;
     public string ScorePrefix = string.Empty;
+    public int scoreValue;
    
-    public Text ScoreText = null;
-    public Text GameOverText = null;
+    public TextMeshProUGUI ScoreText = null;
+    public TextMeshProUGUI GameOverText = null;
 
     //Added for Replayability
     public GameObject Player = null;
@@ -20,14 +23,17 @@ public class GameController : MonoBehaviour
     void Awake()
     {
         ThisInstance = this;
+        ScoreText.SetText(ScorePrefix);
     }
 
     void Update()
     {
         if(ScoreText != null)
         {
-            ScoreText.text = ScorePrefix + Score.ToString();
+            ScoreText.SetText(ScorePrefix + Score.ToString());
         }
+
+        scoreValue = Score;
 
         if(Player == null)
         {
@@ -40,6 +46,7 @@ public class GameController : MonoBehaviour
         if(ThisInstance.GameOverText != null)
         {
             ThisInstance.GameOverText.gameObject.SetActive(true);
+            ThisInstance.button.gameObject.SetActive(true);
         }
     }
 
@@ -47,7 +54,7 @@ public class GameController : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         Score = 0;
-        ScoreText = null;
-        ScorePrefix = string.Empty;
+        ScorePrefix = "Score: ";
+        ScoreText.SetText(ScorePrefix + initScore.ToString());
     }
 }
