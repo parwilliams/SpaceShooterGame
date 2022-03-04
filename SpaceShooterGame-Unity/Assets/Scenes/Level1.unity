@@ -330,7 +330,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &214496568
 GameObject:
@@ -367,7 +367,7 @@ Transform:
   - {fileID: 1074240}
   - {fileID: 1074625170}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &228366292
 GameObject:
@@ -1546,7 +1546,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &772788691
 GameObject:
@@ -1824,7 +1824,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxRadius: 0.88
-  Interval: 5
+  Interval: 1.68
   spawnPoint1: {fileID: 1196381452}
   spawnPoint2: {fileID: 1923038883}
   spawnPoint3: {fileID: 604207297}
@@ -1847,7 +1847,7 @@ Transform:
   - {fileID: 604207297}
   - {fileID: 1487911464}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1196381451
 GameObject:
@@ -1914,6 +1914,70 @@ Transform:
   m_Father: {fileID: 1095797799}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1649321381
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1649321383}
+  - component: {fileID: 1649321382}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1649321382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1649321381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb8a48cbef01d0b49b828f2df65e49b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: Blaster
+    clip: {fileID: 8300000, guid: e4185bbba20fae546915a0ff44b15ff4, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Theme
+    clip: {fileID: 8300000, guid: 5a77643832ac77b4ebc5cae0f65730cf, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: EnemyDeath
+    clip: {fileID: 8300000, guid: e8c0eb76a99916447ad378b268323112, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: PlayerDeath
+    clip: {fileID: 8300000, guid: 73a4aaa994851aa4b95791c6875f9280, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+--- !u!4 &1649321383
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1649321381}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.14640439, y: 1.0861013, z: -1.0590492}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1782002640
 GameObject:
   m_ObjectHideFlags: 0
@@ -1950,7 +2014,7 @@ MonoBehaviour:
     file_cachedStartup: {fileID: 0}
     data_cachedStartup: 
     cacheStartup: 0
-  showNavGraphs: 1
+  showNavGraphs: 0
   showUnwalkableNodes: 1
   debugMode: 0
   debugFloor: 0
@@ -1977,7 +2041,7 @@ MonoBehaviour:
   heuristic: 2
   heuristicScale: 1
   threadCount: 1
-  maxFrameTime: 1
+  maxFrameTime: 10
   batchGraphUpdates: 0
   graphUpdateBatchingInterval: 0.2
   euclideanEmbedding:
@@ -1998,7 +2062,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1794317091
 GameObject:
@@ -2042,7 +2106,7 @@ Transform:
   m_Children:
   - {fileID: 228366293}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1923038882
 GameObject:
@@ -2175,9 +2239,13 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1316717716}
+    - target: {fileID: 248396071439650910, guid: 89f4f927c2484744f89f1cd451973ed0, type: 3}
+      propertyPath: DeathParticlesPrefab
+      value: 
+      objectReference: {fileID: 6945749021421081962, guid: 4284666a71548234d8bcbde81e1d707c, type: 3}
     - target: {fileID: 248396071439650911, guid: 89f4f927c2484744f89f1cd451973ed0, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 248396071439650911, guid: 89f4f927c2484744f89f1cd451973ed0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2254,7 +2322,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7679999369519299190, guid: db2110301feaba542afd1062f6f7dacf, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7679999369519299190, guid: db2110301feaba542afd1062f6f7dacf, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2300,5 +2368,9 @@ PrefabInstance:
       propertyPath: reloadDelay
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7679999369519299192, guid: db2110301feaba542afd1062f6f7dacf, type: 3}
+      propertyPath: DeathParticlesPrefab
+      value: 
+      objectReference: {fileID: 6945749021421081962, guid: 1def9d23c53e9b24c9ea008a6ab632e5, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db2110301feaba542afd1062f6f7dacf, type: 3}

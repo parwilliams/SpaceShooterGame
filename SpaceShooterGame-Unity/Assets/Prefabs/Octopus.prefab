@@ -273,7 +273,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c01c8bf9422fd4745950026808ee57ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DeathParticlesPrefab: {fileID: 0}
+  DeathParticlesPrefab: {fileID: 6945749021421081962, guid: 4284666a71548234d8bcbde81e1d707c, type: 3}
   ShouldDestroyOnDeath: 1
   _HealthPoints: 30
 --- !u!114 &248396071439650904

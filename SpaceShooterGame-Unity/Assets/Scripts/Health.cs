@@ -29,6 +29,14 @@ public class Health : MonoBehaviour
 
                 if (ShouldDestroyOnDeath)
                 {
+                    if (this.CompareTag("Player"))
+                    {
+                        FindObjectOfType<AudioManager>().Play("PlayerDeath");
+                    }
+                    else
+                    {
+                        FindObjectOfType<AudioManager>().Play("EnemyDeath");
+                    }
                     Destroy(gameObject);
                 }
             }

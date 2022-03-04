@@ -69,6 +69,8 @@ public class PlayerController : MonoBehaviour
         if(Input.GetButtonDown("Fire1") && canFire)
         {
             canFire = false;
+            //Play Sound for ammo
+            FindObjectOfType<AudioManager>().Play("Blaster");
             Invoke("Shoot", reloadDelay); //Go to Shoot function after you wait for the reload delay
         }
         
