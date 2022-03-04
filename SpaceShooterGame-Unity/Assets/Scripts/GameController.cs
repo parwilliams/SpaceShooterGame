@@ -65,4 +65,9 @@ public class GameController : MonoBehaviour
         ScorePrefix = "Score: ";
         ScoreText.SetText(ScorePrefix + initScore.ToString());
     }
+
+    public void Back()
+    {
+        SceneManager.LoadScene("StartMenu");
+    }
 }
