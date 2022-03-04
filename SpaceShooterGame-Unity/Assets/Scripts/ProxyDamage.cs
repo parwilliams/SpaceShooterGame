@@ -15,7 +15,7 @@ public class ProxyDamage : MonoBehaviour
         }
 
         H.HealthPoints -= DamageRate * Time.deltaTime;
-        healthBar.SetSize(H.HealthPoints);
+        healthBar.SetSize(H.HealthPoints / 100);
     }
     
 }

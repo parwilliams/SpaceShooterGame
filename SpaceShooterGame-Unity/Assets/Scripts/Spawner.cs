@@ -10,6 +10,12 @@ public class Spawner : MonoBehaviour
     public Transform spawnPoint2;
     public Transform spawnPoint3;
     public Transform spawnPoint4;
+    public Transform spawnPoint5;
+    public Transform spawnPoint6;
+    public Transform spawnPoint7;
+    public Transform spawnPoint8;
+    public Transform spawnPoint9;
+    public Transform spawnPoint10;
     public GameObject ObjToSpawn = null;
     private Transform Origin = null;
     [SerializeField] private Vector3 SpawnPos3D;
@@ -33,8 +39,9 @@ public class Spawner : MonoBehaviour
 
 
 
-        spawnPositions = new Transform[] { spawnPoint1, spawnPoint2, spawnPoint3, spawnPoint4 };
-        randInt = Random.Range(0, 4);
+        spawnPositions = new Transform[] { spawnPoint1, spawnPoint2, spawnPoint3, spawnPoint4, spawnPoint5, spawnPoint6, spawnPoint7,
+                                spawnPoint8, spawnPoint9, spawnPoint10};
+        randInt = Random.Range(0, 10);
 
         // SpawnPos3D = Origin.position + Random.onUnitSphere * MaxRadius;
         //Vector2 SpawnPos = new Vector2(SpawnPos3D.y, SpawnPos3D.x);

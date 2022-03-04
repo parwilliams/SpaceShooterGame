@@ -5,9 +5,9 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
 
-public class GameController : MonoBehaviour
+public class GameControllerLevel2 : MonoBehaviour
 {
-    public static GameController ThisInstance = null;
+    public static GameControllerLevel2 ThisInstance = null;
     public static int Score;
     public static int initScore = 0;
     public string ScorePrefix = string.Empty;
@@ -19,7 +19,9 @@ public class GameController : MonoBehaviour
 
     //Added for Replayability
     public GameObject Player = null;
+    public GameObject BigOct = null;
     public Button button = null;
+    public Button button2 = null;
 
     void Awake()
     {
@@ -36,9 +38,12 @@ public class GameController : MonoBehaviour
 
         scoreValue = Score;
 
-        if(Player == null)
+        if (Player == null || BigOct == null)
         {
-            GameOver();
+            if(!(Player == null && BigOct == null))
+            {
+                GameOver();
+            }
         }
     }
 
@@ -49,20 +54,28 @@ public class GameController : MonoBehaviour
             if (GameObject.FindGameObjectsWithTag("Player").Length != 0)
             {
                 ThisInstance.CongratulationsText.gameObject.SetActive(true);
+                ThisInstance.button2.gameObject.SetActive(true);
+
             }
             else
             {
                 ThisInstance.GameOverText.gameObject.SetActive(true);
+                ThisInstance.button.gameObject.SetActive(true);
             }
-            ThisInstance.button.gameObject.SetActive(true);
         }
     }
 
     public void Restart()
     {
+        Debug.Log("Got here");
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         Score = 0;
         ScorePrefix = "Score: ";
         ScoreText.SetText(ScorePrefix + initScore.ToString());
+    }
+
+    public void Back()
+    {
+        SceneManager.LoadScene("StartMenu");
     }
 }
