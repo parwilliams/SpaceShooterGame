@@ -11,7 +11,7 @@ public class ScoreOnDestroy : MonoBehaviour
         if (GameObject.FindGameObjectsWithTag("Player").Length != 0) //Keep cloned enemies from scoring after game ends
         {
             GameController.Score += ScoreValue;
-            Debug.Log("Score");
+            //Debug.Log("Score");
         }
         
     }

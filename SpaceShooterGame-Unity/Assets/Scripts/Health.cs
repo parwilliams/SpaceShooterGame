@@ -5,6 +5,7 @@ using UnityEngine;
 public class Health : MonoBehaviour
 {
     public GameObject DeathParticlesPrefab = null;
+    [SerializeField] private HealthBar healthBar;
 
     public bool ShouldDestroyOnDeath = true;
 

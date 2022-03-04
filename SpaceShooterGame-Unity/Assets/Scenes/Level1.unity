@@ -2902,6 +2902,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 248396070882882434, guid: 89f4f927c2484744f89f1cd451973ed0, type: 3}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 248396071439650880, guid: 89f4f927c2484744f89f1cd451973ed0, type: 3}
       propertyPath: m_Name
       value: Octopus
@@ -3042,6 +3046,10 @@ PrefabInstance:
     - target: {fileID: 7679999369519299191, guid: db2110301feaba542afd1062f6f7dacf, type: 3}
       propertyPath: reloadDelay
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7679999369519299192, guid: db2110301feaba542afd1062f6f7dacf, type: 3}
+      propertyPath: healthBar
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7679999369519299192, guid: db2110301feaba542afd1062f6f7dacf, type: 3}
       propertyPath: DeathParticlesPrefab
