@@ -2438,7 +2438,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxRadius: 0.88
-  Interval: 1.68
+  Interval: 0.49
   spawnPoint1: {fileID: 1196381452}
   spawnPoint2: {fileID: 1923038883}
   spawnPoint3: {fileID: 604207297}

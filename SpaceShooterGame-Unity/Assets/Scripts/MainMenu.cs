@@ -7,8 +7,13 @@ public class MainMenu : MonoBehaviour
 {
     //Code from Brackeys Start Menu: https://www.youtube.com/watch?v=zc8ac_qUXQY
 
-    public void PlayGame(){
+    public void PlayEndless(){
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    public void PlayBoss()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
     }
 
     public void QuitGame()
